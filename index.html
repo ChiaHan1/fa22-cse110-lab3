@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- 
+    - a title
+    - subtitle for the meeting section/the topic of the meeting (e.g. "brainstorming", "check-ins", "documentation")
+    - subtitle for the date
+    - attendance list
+    - agenda of what the meeting will cover
+    - things that were unfinished business from last meeting
+    - things that are new business that need to be talked about
+    - any miscellaneous comments / questions / concerns that anyone would like to bring up
+    - pictures of any diagrams / architecture / things that were presented
+    - audio recording the meeting
+    - video recording of the meeting
+-->
+<html lang="en">
+    <!--Document Metadata-->
+  <head>
+    <title>Meeting Minutes</title>
+    <meta name="Meeting Minutes" charset="UTF-8"/>
+    <link rel="icon" href="/multimedia/IMG_9346.jpg" />
+  </head>
+
+  <body>
+    <header>
+        <h1>CSE 110 Group 35 Meeting 1</h1>
+        <h3>First Meeting</h3>
+        <h3>10/5/2022</h3>
+    </header>
+
+    <nav class="Meeting Minutes">
+        <a href="#meeting info">Meeting Information</a>
+        <a href="#purpose">Purpose</a>
+        <a href="#attendance list">Attendance List</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#comments">Questions/Comments/Concerns</a>
+        <a href="#next time">Things to Do Next Time</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#feedback">Feedback</a>
+    </nav>
+
+    <main>
+        <hr>
+        <section id="meeting info">
+            <h2>
+                Meeting Information
+            </h2>
+            <p>
+                <time datetime="2022-10-05">10/5/2022</time> <br>
+                <time datetime="8:40">8:40</time> <br>
+                Location: Zoom
+            </p>
+        </section>
+    
+        <hr>
+        
+        <section id="purpose">
+            <h2>
+                Purpose
+            </h2>
+                <p>
+                    This is our <b>first</b> group meeting. The first and most important thing for today's meeting is to 
+                    meet with <i>the TA and gorupmates</i>. <br>
+                    The TA introduced <strong>the project and how to work on the project as a team</strong><br>
+                    Then, everyone <em>introduced themselves briefly</em>.
+                </p>
+        </section>
+        <footer>
+            This note is created by Chia-Han Chen. To contact me, please email me to 
+            <a href="mailto:chc016@ucsd.edu">this email</a>.
+        </footer>
+    
+        <hr>
+    
+        <section id="attendance list">
+            <h2>
+                Attendance List
+            </h2>
+            <ul>
+                <li>Ananya Dey <b>(TA)</b> </li>
+                <li>Sarah Thomson <b>(Team Leader)</b> </li>
+                <li>Chia-Han Chen</li>
+                <li>Nicholas Tran</li>
+                <li>Nathan Enrici</li>
+                <li>Alexander Yang</li>
+                <li>Yuzeng Li</li>
+            </ul>
+        </section>
+    
+        <hr>
+    
+        <section id="agenda">
+            <h2>
+                Agenda
+            </h2>
+            <h4>
+                Things from Last Time:
+            </h4>
+            <p>
+                None
+            </p>
+            <h4>
+                Things to Talk about this Time
+            </h4>
+            <p>
+                <ol>
+                    <li>Meet each other</li>
+                    <li>Introduce the project</li>
+                </ol>
+            </p>
+        </section>
+    
+        <hr>
+    
+        <section id="comments">
+            <h2>
+                Comments/Questions/Concerns
+            </h2>
+            <p>None</p>
+        </section>
+
+        <hr>
+
+        <section id="next time">
+            <h2>
+                Things to Do Next Time
+            </h2>
+            <details>
+                <summary> Things to Do Next Time</summary>
+                    <p>
+                        <ul>
+                            <li>Schedule meeting time that works for everyone</li>
+                            <li>brainstorm for the project</li>
+                        </ul>
+                    </p>
+            </details>
+        </section>
+
+        <hr>
+
+        <section id="multimedia">
+            <h2>
+                Multimedia
+            </h2>
+            <img class="geisel"
+                 src="/multimedia/IMG_9346.jpg"
+                 alt="Geisel Library at UCSD"
+            >
+            <footer>Geisel Library at UCSD</footer>
+
+            <figure>
+                <audio
+                    controls
+                    src="/multimedia/Closer – LiQWYD (No Copyright Music).mp3">
+                    <a href="/multimedia/Closer – LiQWYD (No Copyright Music).mp3"></a>
+                </audio>
+            </figure>
+            <footer>
+                Closer -- LiQWYD (No Copyright Music)
+            </footer>
+
+            <video controls width="250">
+                <source src="/multimedia/IMG_9352.mp4"
+                        type="video/mp4">
+                Download the 
+                <a href="/multimedia/IMG_9352.mp4">MOV</a>
+                video
+            </video>
+            <footer>
+                Denver Nuggets 22-23 Season Training Camp at UCSD
+            </footer>
+        </section>
+
+        <hr>
+
+        <section id="feedback">
+            <h2>
+                Feedback
+            </h2>
+            <form method="get">
+                <label>
+                    Name:
+                    <input type="text" name="name" autocomplete="name" required/>
+                </label>
+                
+                <br>
+                <br>
+                
+                <label>
+                    Email:
+                    <input type="text" email="name" autocomplete="email" required/>
+                </label>
+
+                <br>
+                <br>
+
+                <label>
+                    Today's Date
+                </label>
+                <input type="date" min="2022-01-01" max="2023-12-31">
+
+                <br>
+                <br>
+
+                <label>
+                    Did you attend the meeting?
+                </label>
+                <input list="attend">
+                <datalist id="attend">
+                    <option value="YES">
+                    <option value="NO">
+                </datalist>
+
+                <br>
+                <br>
+
+                <label>
+                    Your Feedback
+                </label>
+                <br>
+                <textarea id="feedback" name="feedback" row="5" cols="33"></textarea>
+                
+                <br>
+                <br>
+
+                <label>
+                    Do you want to be anonymous?
+                </label>
+                <select name="anonymous" id="anonymous">
+                    <option value="">--Please choose an option--</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <br>
+                <br>
+
+                <fieldset>
+                    <legend>
+                        Do you want to here feedback from us?
+                    </legend>
+                    <label><input type="radio" name="radio" value="yes" /> Yes</label>
+                    <label><input type="radio" name="radio" value="no" /> No</label>
+                </fieldset>
+
+                <br>
+                <button class="submit" type="button">
+                    Submit
+                </button>
+            </form>
+        </section>
+    </main>
+    <hr>
+
+    <div>
+        <span target="_blank">CSE 110 Group 35</span>
+        <span target="_blank">Meeting 1</span>
+    </div>
+
+  </body>
+</html>
