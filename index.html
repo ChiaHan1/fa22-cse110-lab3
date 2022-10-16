@@ -15,27 +15,46 @@
 <html lang="en">
     <!--Document Metadata-->
   <head>
+    <link rel="stylesheet" href="style.css">
     <title>Meeting Minutes</title>
     <meta name="Meeting Minutes" content="Meeting Minutes"/>
     <link rel="icon" href="/multimedia/IMG_9346.jpg" />
   </head>
 
   <body>
+    <h1>CSE 110 Group 35 Meeting 1</h1>
     <header>
-        <h1>CSE 110 Group 35 Meeting 1</h1>
         <h3>First Meeting</h3>
         <h3>10/5/2022</h3>
     </header>
 
     <nav class="Meeting Minutes">
-        <a href="#meeting_info">Meeting Information</a>
-        <a href="#purpose">Purpose</a>
-        <a href="#attendance_list">Attendance List</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#comments">Questions/Comments/Concerns</a>
-        <a href="#next_time">Things to Do Next Time</a>
-        <a href="#multimedia">Multimedia</a>
-        <a href="#feedback">Feedback</a>
+        <article class="container">
+            <span>
+                <a href="#meeting_info">Meeting Information</a>
+            </span>
+            <span>
+                <a href="#purpose">Purpose</a>
+            </span>
+            <span>
+                <a href="#attendance_list">Attendance List</a>
+            </span>
+            <span>
+                <a href="#agenda">Agenda</a>
+            </span>
+            <span>
+                <a href="#comments">Questions/Comments/Concerns</a>
+            </span>
+            <span>
+                <a href="#next_time">Things to Do Next Time</a>
+            </span>
+            <span>
+                <a href="#multimedia">Multimedia</a>
+            </span>
+            <span>
+                <a href="#feedback">Feedback</a>
+            </span>
+        </article>
     </nav>
 
     <main>
@@ -44,10 +63,18 @@
             <h2>
                 Meeting Information
             </h2>
-            <p>
-                <time datetime="2022-10-05">Date: 10/5/2022</time> <br>
-                <time datetime="20:40"> Time: 8:40pm</time> <br>
-                Location: Zoom
+            <p class="meeting_info">
+                <article>
+                    <span>
+                        <time datetime="2022-10-05">Date: 10/5/2022</time>
+                    </span>
+                    <span>
+                        <time datetime="20:40"> Time: 8:40pm</time>
+                    </span>
+                    <span>
+                        Location: Zoom
+                    </span>
+                </article>
             </p>
         </section>
     
@@ -76,13 +103,15 @@
                 Attendance List
             </h2>
             <ul>
-                <li>Ananya Dey <b>(TA)</b> </li>
-                <li>Sarah Thomson <b>(Team Leader)</b> </li>
-                <li>Chia-Han Chen</li>
-                <li>Nicholas Tran</li>
-                <li>Nathan Enrici</li>
-                <li>Alexander Yang</li>
-                <li>Yuzeng Li</li>
+                <li><span>Ananya Dey <b>(TA)</b></span></li>
+                <li><span>Sarah Thomson <b>(Team Leader)</b></span></li>
+                <li><span>Chia-Han Chen</span></li>
+                <li><span>Nicholas Tran</span></li>
+            </ul>
+            <ul>
+                <li><span>Nathan Enrici</span></li>
+                <li><span>Alexander Yang</span></li>
+                <li><span>Yuzeng Li</span></li>
             </ul>
         </section>
     
@@ -124,10 +153,8 @@
             </h2>
             <details>
                 <summary> Things to Do Next Time</summary>
-                    <ul>
-                        <li>Schedule meeting time that works for everyone</li>
-                        <li>brainstorm for the project</li>
-                    </ul>
+                    <span>Schedule meeting time that works for everyone</span>
+                    <span>Brainstorm for the project</span>
             </details>
         </section>
 
@@ -173,32 +200,32 @@
                 Feedback
             </h2>
             <form method="get">
-                <label>
-                    Name:
+                <label class="field">
+                    Name: <span class="req">*</span>
                     <input type="text" name="name" autocomplete="name" required/>
                 </label>
                 
                 <br>
                 <br>
                 
-                <label>
-                    Email:
+                <label class="field">
+                    Email: <span class="req">*</span>
                     <input type="text" name="email" autocomplete="email" required/>
                 </label>
 
                 <br>
                 <br>
 
-                <label>
+                <label class="field">
                     Today's Date
                 </label>
-                <input type="date" min="2022-01-01" max="2023-12-31">
+                <input type="date" id="date" min="2022-01-01" max="2023-12-31">
 
                 <br>
                 <br>
 
-                <label>
-                    Did you attend the meeting?
+                <label class="field">
+                    Did you attend the meeting? <span class="req">*</span>
                 </label>
                 <input list="attend">
                 <datalist id="attend">
@@ -209,8 +236,8 @@
                 <br>
                 <br>
 
-                <label>
-                    Your Feedback
+                <label class="field">
+                    Your Feedback <span class="req">*</span>
                 </label>
                 <br>
                 <textarea rows="5" cols="33"></textarea>
@@ -218,8 +245,8 @@
                 <br>
                 <br>
 
-                <label>
-                    Do you want to be anonymous?
+                <label class="field">
+                    Do you want to be anonymous? <span class="req">*</span>
                 </label>
                 <select name="anonymous" id="anonymous">
                     <option value="">--Please choose an option--</option>
@@ -232,7 +259,7 @@
 
                 <fieldset>
                     <legend>
-                        Do you want to here feedback from us?
+                        Do you want to here feedback from us? <span class="req">*</span>
                     </legend>
                     <label><input type="radio" name="radio" value="yes" /> Yes</label>
                     <label><input type="radio" name="radio" value="no" /> No</label>
