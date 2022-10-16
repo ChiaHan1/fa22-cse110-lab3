@@ -15,9 +15,18 @@ body {
     }
 }
 
+/* Universal Selector */
+* {
+    border-radius: 0.2cm;
+}
+
+/* selector list */
+h1, h2 {
+    font-family: 'Courier New';      /* font of the h1 and h3 */
+}
+
 /* model box for h1 */
 h1 {
-    font-family: Courier New;     /* font of the heading */
     color: darkblue;            /* color of text */
     border-style: doubled;        /* doubled line border for the model box */
     text-align: center;           /* align the text */
@@ -25,6 +34,7 @@ h1 {
     position: static;             /* static position */
     background-color: skyblue;  /* backgrond color for the model box */
 }
+
 
 /* model box for h3 */
 h3 {
@@ -58,13 +68,44 @@ nav article {
 
 nav article span {
     border-style: solid;           /* border style */
-    border-color: lightskyblue;  /* border color */
     border-radius: 7px;            /* border radius */
     padding: .5em .7em .5em .7em;  /* padding */
     margin: 1mm;                   /* margin */
     background-color: lightgray; /* backgrond color */
     justify-content: space-evenly; /* space evenly */
     max-width: max-content;
+}
+
+a[href="#meeting_info"] {
+    background-color: lightblue;
+}
+
+a[href="#purpose"] {
+    background-color: lightskyblue;
+}
+
+a[href="#attendance_list"] {
+    background-color: lavender;
+}
+
+a[href="#agenda"] {
+    background-color: lightsteelblue;
+}
+
+a[href="#comments"] {
+    background-color: lightcyan;
+}
+
+a[href="#next_time"] {
+    background-color: lightyellow;
+}
+
+a[href="#multimedia"] {
+    background-color: aquamarine;
+}
+
+a[href="#feedback"] {
+    background-color: aqua;
 }
 
 /* hover link */
@@ -78,7 +119,6 @@ a:active {
 
 /* model box for h2 */
 h2 {
-    font-family: Courier New;      /* font of the heading */
     color: blue;                 /* color of text */
     text-decoration: underline;    /* underline text */
     text-align: left;              /* align the text */
@@ -89,6 +129,18 @@ h2 {
     margin-bottom: 10px;           /* margin-bottom */
     padding: 20px 10px 20px 10px;  /* padding */
     background-color: skyblue;   /* backgrond color for the model box */
+}
+
+/* child combinator */
+#purpose > p {
+    background-color: lavender;
+    padding: 0.2in;
+    font-family: Helvetica;
+}
+
+#purpose > footer {
+    background-color: lightblue;
+    color: gray;
 }
 
 /* meeting info */
@@ -108,11 +160,34 @@ article span {
 }
 
 /* attendance list */
-ul {
+#attendance {
     background-color: lightgray;
     display: inline-block;
     width: 6cm;
     margin: .2in;
+}
+
+/* combining two selectors */
+article.attendance {
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* adjacent sibling combinator */
+h4 ~ ol {
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* general sibling combinator */
+h4 ~ p {
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+/* id selector */
+#important {
+    color: red;
 }
 
 ul span {
@@ -143,12 +218,8 @@ label {
     margin: 1px;
     padding: 1px;
 }
-  
-.field {
-    margin: 1px;
-    padding: 1px;
-}
 
+/* class selector */
 .req {
     color: red;
 }
